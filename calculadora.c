@@ -1,19 +1,19 @@
 #include<stdio.h>
 
 
-void coleta_operandos(int qtd, int* num1, int* num2)
+void coleta_operandos(int qtd, float* num1, float* num2)
 {
     printf("Digite o primeiro operando:");
-    scanf("%d%*c", num1);
+    scanf("%f%*c", num1);
 
     if (qtd == 2)
     {
         printf("Digite o segundo operando:");
-        scanf("%d%*c", num2);
+        scanf("%f%*c", num2);
     }
 }
 
-int soma(int num1, int num2)
+float soma(float num1, float num2)
 {
     return num1 + num2;
 }
