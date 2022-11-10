@@ -70,7 +70,7 @@ int main(void)
 
     while(1)
     {
-        printf("Digite a operacao desejada (+, 0):");
+        printf("Digite a operacao desejada (+, -, *, /, ^, !, 0):");
         scanf("%c%*c", &op);
         num_op = 2;
 
