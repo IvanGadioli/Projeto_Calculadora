@@ -54,6 +54,15 @@ int potencia(int num1, int num2)
     return res;
 }
 
+int fatorial(int num1)
+{
+    int res = 1;
+    for (int i = 1; i <= num1; i = soma(i, 1))
+        res = multiplicacao(res, i);
+    
+    return res;
+}
+
 int main(void)
 {
     char op;
@@ -92,6 +101,12 @@ int main(void)
             res = potencia(num1, num2);
             break;
 
+        case '!':
+            num_op = 1;
+            coleta_operandos(num_op, &num1, NULL);
+            res = fatorial(num1);
+            break;
+
         case '0':
             return 0;
         
@@ -101,6 +116,8 @@ int main(void)
 
         if (num_op == 2)
             printf("%d %c %d = %d\n", num1, op, num2, res);
+        else if (num_op == 1)
+            printf("%c %d = %d\n", num1, op, res);
     }
 
     return 0;
